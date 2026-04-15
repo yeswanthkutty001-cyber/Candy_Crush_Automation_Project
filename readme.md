@@ -82,9 +82,116 @@ The next development stages are:
 
 
 
-## Tech Stack
+## Current Project Structure
 
-* Python
-* Tkinter
-* Pillow (PIL)
+```text
+Candy Crush/
+│
+├── coord.py               # Manual coordinate selection tool
+├── screen.py              # Fixed crop script for board extraction
+├── game.jpg               # Sample game screenshot
+├── cropped_matrix.png     # Output cropped board image
+├── README.md              # Project documentation
+└── requirements.txt       # Python dependencies (recommended)
+```
 
+
+
+## How to Run
+
+### 1. Clone the Repository
+
+```bash
+git clone <your-repository-url>
+cd Candy-Crush
+```
+
+### 2. Install Dependencies
+
+```bash
+pip install pillow
+```
+
+### 3. Run Coordinate Selection Tool
+
+Use this script to manually select the game board region:
+
+```bash
+python coord.py
+```
+
+### 4. Run Fixed Crop Script
+
+Use this script to crop the board directly using predefined coordinates:
+
+```bash
+python screen.py
+```
+
+
+## Requirements
+
+Before running the scripts, make sure the following are installed:
+
+* Python 3.10+
+* Pillow (`PIL`)
+* Tkinter (usually included with Python)
+
+Optional (recommended):
+
+```bash
+pip install -r requirements.txt
+```
+
+
+## Usage Workflow
+
+A typical workflow for this project is:
+
+1. Capture a screenshot of the Candy Crush game
+2. Save it as `game.jpg`
+3. Run `coord.py` to identify the board boundaries
+4. Use the coordinates in `screen.py`
+5. Generate the cropped board image
+6. Use the cropped image for future candy recognition logic
+
+This preprocessing pipeline is the current foundation of the project.
+
+
+
+## Sample Output
+
+After running the crop script, the expected output is:
+
+```text
+cropped_matrix.png
+```
+
+This file contains only the Candy Crush board matrix extracted from the original screenshot.
+
+![Simulation Output](cropped_matrix.png)
+
+
+## Roadmap
+
+Upcoming development milestones:
+
+* [x] screenshot capture
+* [x] board coordinate selection
+* [x] board matrix cropping
+* [ ] grid cell segmentation
+* [ ] candy classification
+* [ ] valid move detection
+* [ ] best move prediction
+* [ ] auto-play integration
+
+
+
+## Contributing
+
+Suggestions, improvements, and automation ideas are always welcome.
+
+
+## License
+
+This project is currently intended for learning and development purposes.
