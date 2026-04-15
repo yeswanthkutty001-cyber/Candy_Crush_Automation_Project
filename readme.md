@@ -102,7 +102,7 @@ Candy Crush/
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/yeswanthkutty001-cyber/Candy_Crush_Automation_Project.git
 cd Candy-Crush
 ```
 
